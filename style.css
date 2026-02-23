@@ -1,12 +1,14 @@
 :root {
-  --bg: #0d0d0d;
-  --text: #fff;
-  --highlight: #3cff00;
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --highlight: #3b82f6;
 }
 
 body {
   margin: 0;
-  font-family: "Consolas", sans-serif;
+  font-family: "Inter", sans-serif;
   background: var(--bg);
   color: var(--text);
   transition: background 0.3s, color 0.3s;
@@ -29,6 +31,8 @@ nav {
   flex-wrap: wrap;
 }
 .logo {
+  font-size: 25px;
+  font-weight: bold;
   color: var(--highlight);
   display: flex;
   align-items: center;
@@ -45,13 +49,15 @@ nav {
   flex-wrap: wrap;
 }
 .menu a {
-  color: var(--highlight);
+  color: var(--text);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
+  opacity: 0.8;
 }
 .menu a:hover {
-  color: var(--text);
+  color: var(--highlight);
+  opacity: 1;
 }
 .social {
   display: flex;
@@ -84,6 +90,12 @@ nav {
   min-height: 100vh;              /* ocupa a tela toda */
 }
 
+.hello{
+  font-size: 14px;
+  letter-spacing: 2px;
+  color:  var(--text-secondary);
+}
+
 .texto {
   flex: 1;
   display: flex;
@@ -92,7 +104,14 @@ nav {
   font-size: 30px;
 }
 
-.texto h2 span {
+.texto h2{
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.texto h3{
+  font-size: 22px;
+  font-weight: 500;
   color: var(--highlight);
 }
 
@@ -111,7 +130,7 @@ nav {
 
 /* Seções */
 section {
-  padding: 60px 8%;
+  padding: 100px 10%;
   text-align: center;
 }
 .cards {
@@ -121,7 +140,8 @@ section {
   justify-content: center;
 }
 .card {
-  background: #1a1a1a;
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.05);
   padding: 20px;
   border-radius: 12px;
   width: 280px;
